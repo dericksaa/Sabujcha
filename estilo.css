@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* img {
+    max-width: 100%;
+    display: block;
+} */
+
+/**seccion del menu**/
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    align-items: center;
+    margin: 30px 10px;
+}
+
+
+.select_menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+@media (max-width: 1020px){
+    .select_menu{
+        display: none;
+    }
+}
+
+.select{
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+.menu_derecho{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-column-gap: 10px;
+}
+
+@media (max-width: 1020px){
+    .menu_derecho{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.carrito, .des_menu{
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (max-width: 1020px){
+    .des_menu{
+        display: none;
+    }
+}
+
+/**seccion del titulo**/
+
+.titulo{
+    background-image: url(./imagenes/slider-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    .titulo{
+        height: 500px;
+        
+    }
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 18px;
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 35px;
+    }
+}
+
+.shopnow{
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/**seccion de BANNER**/
+
+.banner-1{
+    background-image: url(./imagenes/banner-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    height: 271px;
+}
