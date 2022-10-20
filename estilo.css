@@ -5,8 +5,9 @@
     
 }
 
-html{
-    width: 95%;
+main {
+    width: 100vw;
+    max-width: 1536px;
     margin: 0 auto;
 }
 
@@ -27,7 +28,7 @@ html{
     position: relative;
 }
 
-@media (max-width:720px) {
+@media (max-width:1200px) {
     .menu{
         justify-content: flex-end;
     }
@@ -40,7 +41,7 @@ html{
     grid-column-gap: 20px;
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1200px){
     .select_menu{
         display: none;
     }
@@ -59,7 +60,7 @@ html{
     transform: translate(-50%, -50%);
 }
 
-@media (max-width:720px) {
+@media (max-width:1200px) {
     .logo{
         left:5%;
         transform: translate(-0%, -50%);
@@ -74,7 +75,7 @@ html{
     grid-column-gap: 10px;
 }
 
-@media (min-width: 1020px){
+@media (min-width: 1200px){
     .menu_derecho{
         grid-template-columns: repeat(2, 1fr);
         align-self: flex-end;
@@ -87,15 +88,15 @@ html{
     
 }
 
-@media (min-width: 1020px){
+@media (min-width: 1200px){
     .des_menu{
         display: none;
     }
 }
 
-/**seccion del titulo**/
+/**seccion del hero**/
 
-.titulo{
+.hero{
     background-image: url(./imagenes/slider-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,8 +108,8 @@ html{
     align-items: center;
 }
 
-@media (max-width: 768px){
-    .titulo{
+@media (max-width: 1200px){
+    .hero{
         height: 400px;
         
     }
@@ -137,11 +138,273 @@ h1{
 
 /**seccion de BANNER**/
 
-.banner-1{
-    background-image: url(./imagenes/banner-1.png);
+.section1 {
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 768px){
+    .section1 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section1__banner {
+    width: 100%;
+    aspect-ratio: 2.1;
+    padding: 0.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section1__banner > h2 {
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.section1__banner > p {
+    z-index: 2;
+}
+
+.banner-1 {
+    background-image: url('./imagenes/banner-1.png');
+    background-size: cover;
+}
+
+.banner-2 {
+    background-image: url('./imagenes/banner-1.png');
+    background-size: cover;
+}
+
+/**SECCION 2 PRODUCTOS**/
+
+.section2{
+    background-image: url(./imagenes/bg-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    height: 271px;
+.section2__titulo{
+    text-align: center;
+}
+
+.section2__titulo > h2{
+    padding-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+@media (max-width: 500px){
+    .section2__titulo > h2{
+        font-size: 30px;
+    }
+}
+
+.section2__titulo > p{
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 400; 
+}
+
+@media (max-width: 500px){
+    .section2__titulo > p{
+        font-size: 13px;
+    }
+}
+
+.products{
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1200px){
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 590px){
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section2_product{
+    width: 100%;
+    background-size: cover;
+    aspect-ratio: 0.94;
+    padding: 1rem 1rem;
+}
+
+.section2_product > img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.producto1{
+    background-image: url(./imagenes/product-detalis-l1.jpg);
+}
+.producto2{
+    background-image: url(./imagenes/product-2.jpg);
+}
+.producto3{
+    background-image: url(./imagenes/product-3.jpg);
+}
+.producto4{
+    background-image: url(./imagenes/product-4.jpg);
+}
+
+/* productos de la seccion 4 */
+
+.producto5{
+    background-image: url(./imagenes/product-5.jpg);
+}
+.producto6{
+    background-image: url(./imagenes/product-7.jpg);
+}
+.producto7{
+    background-image: url(./imagenes/product-6.jpg);
+}
+.producto8{
+    background-image: url(./imagenes/product-8.jpg);
+}
+
+.cont_desc_prod > h3{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #575757;
+}
+
+.cont_desc_prod > p{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #575757;
+}
+
+span{
+    text-decoration: line-through;
+}
+
+/**SECTION 3 FRASE**/
+
+.section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.section3__p1{
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.section3__p2{
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.section3__p3{
+    text-align: center;
+    padding-top: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #575757;
+}
+
+/**SECTION 4 NEW PRODUCTS**/
+
+/* al final de la seccion 2 se encuentran 
+los fondos los cuatro productos 
+adicionales  */
+
+.section4{
+    background-color: #f3f3f3;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/**SECTION 5 NEW SUSCRIBE**/
+
+.suscribe{
+    background-image: url(./imagenes/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    padding: 92px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.suscribe > h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    padding-bottom: 50px;
+    font-weight: 400;
+}
+
+@media (max-width: 660px){
+    .suscribe > h2{
+        font-size: 30px;
+    }
+}
+
+.fo{
+    width: 430px;
+    height: 55px;
+    padding-left: 20px;
+}
+
+@media (max-width: 660px){
+    .fo {
+        width: 230px;
+    }
+}
+
+.fo1{
+    width: 180px;
+    height: 55px;
+    background-color: #333333;
+    border: none;
+    color: #f3f3f3;
+    font-family: 'Work Sans', sans-serif;
+}
+
+@media (max-width: 660px){
+    .fo1 {
+        width: 60px;
+        font-size: 9px;
+    }
 }
