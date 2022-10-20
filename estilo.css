@@ -20,13 +20,19 @@ html{
 .menu{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     /* display: grid;
     grid-template-columns: 1fr 1fr 1fr; */
     align-items: center;
     margin: 30px 10px;
+    position: relative;
 }
 
+@media (max-width:720px) {
+    .menu{
+        justify-content: flex-end;
+    }
+    
+}
 
 .select_menu{
     display: grid;
@@ -46,6 +52,21 @@ html{
     font-weight: 600;
 }
 
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width:720px) {
+    .logo{
+        left:5%;
+        transform: translate(-0%, -50%);
+    }
+    
+}
+
 .menu_derecho{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -53,18 +74,20 @@ html{
     grid-column-gap: 10px;
 }
 
-@media (max-width: 1020px){
+@media (min-width: 1020px){
     .menu_derecho{
         grid-template-columns: repeat(2, 1fr);
+        align-self: flex-end;
     }
 }
 
 .carrito, .des_menu{
     width: 2rem;
     height: 2rem;
+    
 }
 
-@media (max-width: 1020px){
+@media (min-width: 1020px){
     .des_menu{
         display: none;
     }
@@ -86,7 +109,7 @@ html{
 
 @media (max-width: 768px){
     .titulo{
-        height: 500px;
+        height: 400px;
         
     }
 }
