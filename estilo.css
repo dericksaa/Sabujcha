@@ -381,6 +381,15 @@ adicionales  */
     }
 }
 
+@media (max-width: 660px){
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 .fo{
     width: 430px;
     height: 55px;
@@ -389,7 +398,7 @@ adicionales  */
 
 @media (max-width: 660px){
     .fo {
-        width: 230px;
+        width: 260px;
     }
 }
 
@@ -402,12 +411,6 @@ adicionales  */
     font-family: 'Work Sans', sans-serif;
 }
 
-@media (max-width: 660px){
-    .fo1 {
-        width: 60px;
-        font-size: 9px;
-    }
-}
 
 /**SECTION 6 LATEST PRODUCTS**/
 
@@ -504,6 +507,12 @@ adicionales  */
     gap: 1rem;
 }
 
+@media (max-width: 768px){
+    .section7{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .cont_aliados{
     width: 100%;
     aspect-ratio: 2.07;
@@ -542,12 +551,18 @@ como al pagina de dezzer que replicamos  */
 
 footer{
     background-color: #f3f3f3;
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
 }
+
+@media (max-width: 768px){
+    footer{
+        flex-direction: column;
+    }
+}
+
 
 .footer__column > h2{
     font-family: 'Playfair Display', serif;
@@ -566,5 +581,16 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 30px;
+    padding: 30px;
+}
+
+@media (max-width: 768px){
+    .final_de_pagina{
+        display: block;
+        justify-content: center;
+    }
+
+    .final_de_pagina > p {
+        padding-bottom: 10px;
+    }
 }
