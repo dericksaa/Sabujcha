@@ -398,7 +398,7 @@ adicionales  */
 
 @media (max-width: 660px){
     .fo {
-        width: 20px;
+        width: 270px;
     }
 }
 
@@ -586,7 +586,7 @@ footer{
 
 @media (max-width: 768px){
     .final_de_pagina{
-        display: block;
+        flex-direction: column;
         justify-content: center;
     }
 
