@@ -176,7 +176,7 @@ h1{
 }
 
 .banner-2 {
-    background-image: url('./imagenes/banner-1.png');
+    background-image: url('./imagenes/banner-2.png');
     background-size: cover;
 }
 
@@ -398,7 +398,7 @@ adicionales  */
 
 @media (max-width: 660px){
     .fo {
-        width: 260px;
+        width: 20px;
     }
 }
 
